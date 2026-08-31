@@ -1,0 +1,74 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  year?: string;
+  image?: string;
+  imageAlt?: string;
+  logo?: string;
+  logoAlt?: string;
+}
+
+const { title, subtitle, year, image, imageAlt = "", logo, logoAlt = "" } = Astro.props;
+---
+
+<div class="flex">
+  <div class="education__time">
+    <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
+    <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
+  </div>
+  <div class="experience__data bd-grid px-5">
+    <h3 class="font-semibold mb-1">{title}</h3>
+    {!(image && logo) && (
+      <span class="font-light text-sm">{subtitle}</span>
+    )}
+    {year && (
+      <span class="badge badge-primary badge-outline mt-2">{year}</span>
+    )}
+    {image && !logo && (
+      <img
+        class="my-3 rounded-box shadow-md"
+        src={image}
+        alt={imageAlt || title}
+        loading="lazy"
+      />
+    )}
+
+    {!image && logo && (
+      <div class="my-3 flex">
+        <img
+          class="max-h-48 w-auto object-contain"
+          src={logo}
+          alt={logoAlt || `${title} logo`}
+          loading="lazy"
+        />
+      </div>
+    )}
+
+    {image && logo && (
+      <div class="my-3 flex gap-4 items-stretch">
+        <img
+          class="w-3/5 rounded-box shadow-md object-cover"
+          src={image}
+          alt={imageAlt || title}
+          loading="lazy"
+        />
+
+        <div class="w-2/5 flex flex-col items-center justify-center gap-2 text-center">
+          <img
+            class="max-h-40 w-auto object-contain"
+            src={logo}
+            alt={logoAlt || `${title} logo`}
+            loading="lazy"
+          />
+          <span class="text-xs font-medium leading-tight">{subtitle}</span>
+        </div>
+      </div>
+    )}
+
+    <div class="my-2 text-justify">
+      <slot />
+    </div>
+  </div>
+</div>
+

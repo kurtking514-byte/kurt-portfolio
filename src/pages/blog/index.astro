@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TimeLineElement from "../../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Journey" sideBarActiveItemID="blog">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">My Journey</div>
+    <p class="text-base font-light">
+      A personal timeline of the schools, milestones, and achievements that shaped the builder I am today.
+    </p>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+
+    <TimeLineElement
+      title="Elementary School Graduation"
+      subtitle="[Elementary School Name]"
+      year="[Year]"
+      image="/images/elem-grad.jpg"
+      imageAlt="Elementary school graduation photo"
+    >
+      <p>
+        Graduated from elementary school. This was where my curiosity for how things work first started.
+      </p>
+      <p class="font-semibold mt-2">Achievements:</p>
+      <ul class="list-disc ml-5 mt-1">
+        <li>[Add an academic award, recognition, or leadership role here.]</li>
+        <li>[Add another achievement here.]</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Junior/Senior High School Graduation"
+      subtitle="Maddela Comprehensive High School"
+      year="[Year]"
+      image="/images/highschool-grad.jpg"
+      imageAlt="Junior/Senior high school graduation photo"
+    >
+      <p>
+        Completed junior and senior high school at Maddela Comprehensive High School in Quirino.
+        This chapter built the discipline, optimism, and curiosity that led me toward technology.
+      </p>
+      <p class="font-semibold mt-2">Achievements:</p>
+      <ul class="list-disc ml-5 mt-1">
+        <li>[Add an academic award, club, competition, or leadership role here.]</li>
+        <li>[Add another achievement here.]</li>
+      </ul>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="B.S. in Computer Science"
+      subtitle="University of the Cordilleras"
+      year="[Year] – Present"
+      image="/images/uc-bscs.jpg"
+      imageAlt="University of the Cordilleras campus or student photo"
+    >
+      <p>
+        Currently pursuing a Bachelor of Science in Computer Science at the University of the Cordilleras.
+        My focus is growing as an AI-augmented developer and building projects that connect hardware and software.
+      </p>
+      <p class="font-semibold mt-2">Current Focus & Achievements:</p>
+      <ul class="list-disc ml-5 mt-1">
+        <li>[Add a current course, project, organization, or achievement here.]</li>
+        <li>[Add another focus area or achievement here.]</li>
+      </ul>
+    </TimeLineElement>
+
+  </div>
+</BaseLayout>

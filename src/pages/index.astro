@@ -1,0 +1,122 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Kurt King D. Magastino</div>
+    <div class="text-3xl py-3 font-bold">Operating in the space between hardware and software, using AI as a tool to build solutions that matter.</div>
+    <div class="py-2">
+      <text class="text-lg">
+        From <b>Maddela, Quirino</b>. Graduated from <b>Maddela Comprehensive High School</b> and currently pursuing a <b>Bachelor of Science in Computer Science</b> at the <b>University of the Cordilleras</b>.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="#" target="_blank"> Let's connect!</a>
+    </div>
+  </div>
+
+  <div class="pb-8">
+    <div class="text-3xl w-full font-bold mb-2">About</div>
+    <div class="py-2">
+      <text class="text-lg">
+        I am passionate about creating software and hardware that helps solve modern-day problems, with AI as my primary tool. What drives me is the ability to take an idea from concept to working prototype by leveraging artificial intelligence to amplify my capabilities as a builder. I do not just use AI — I use it proficiently. From emotionally responsive robots to intelligent tutoring systems, every project I build is a reflection of how I harness AI to turn imagination into functional reality.
+      </text>
+    </div>
+  </div>
+
+  <div class="pb-8">
+    <div class="text-3xl w-full font-bold mb-2">Goal / Ambition</div>
+    <div class="py-2">
+      <text class="text-lg">
+        My goal is to grow more as an <b>AI-Augmented Developer</b>: someone who leverages AI to design and ship projects that solve real problems and improve how people live and interact with technology.
+      </text>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My Projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="ROBERT0"
+    img="/robert0.jpg"
+    desc="An emotionally responsive robot that listens to users as they describe how they feel. It identifies the stated emotion, performs small head movements that reflect that emotion, and plays corresponding music to comfort the user — a bridge between hardware mechanics and empathetic software."
+    url="#"
+    techStack="Hardware sensors, emotion recognition AI, motor control"
+    tags={["Hardware", "Emotion Recognition", "AI", "Robotics"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Tutor Gojo"
+    img="/tutor-gojo.png"
+    desc="An AI tutor designed to teach programming step by step. It tracks the learner's progress through the curriculum and adapts to their pace. An upcoming feature will introduce quizzes to test and reinforce what the user has learned, making it a complete guided learning companion."
+    url="#"
+    techStack="React 19, Vite, FastAPI, SQLite, Google Gemini API"
+    tags={["EdTech", "AI Tutor", "Programming", "Progress Tracking"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Prompt Refiner"
+    img="/prompt-refiner.png"
+    desc="Lightweight Windows utility (Tauri/Rust + React) that refines prompts using the Groq API via a global hotkey (Alt+Space)."
+    url="#"
+    techStack="Tauri, Rust, React, Groq API"
+    tags={["Productivity", "AI", "Desktop Utility", "Prompt Engineering"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="B.A.L.O.N.G"
+    desc="Autonomous medical delivery robot using Raspberry Pi 3B+ and Cytron URC10 to reduce understaffed hospital workloads."
+    url="#"
+    techStack="Raspberry Pi 3B+, Cytron URC10, Python, PyQt5, C/C++, SQLite"
+    tags={["Hardware", "Robotics", "Autonomous Navigation", "Healthcare Tech"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="POSEIDON"
+    img="/poseidon.jpg"
+    desc="Portable pico-hydropowered flashlight that converts water flow into electricity for off-grid lighting."
+    url="#"
+    techStack="Dual Pico-Hydro Turbines, DC-DC Buck Converter, Li-ion Battery"
+    tags={["Dual Pico-Hydro Turbines", "DC-DC Buck Converter", "Li-ion Battery"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Norman Cellphone Center and Accessories"
+    desc="Admin dashboard and AI-assisted Messenger storefront for a phone retail and repair shop. Customers browse products, reserve items, and request repairs through a Facebook Messenger bot powered by AI (DeepSeek + Gemini). Shop staff manage inventory, reservations, repairs, and customer conversations through a React admin dashboard with JWT-based authentication."
+    url="#"
+    badge="In Development"
+    techStack="FastAPI, React 18, Vite 5, SQLite, DeepSeek API, Gemini API, JWT Auth"
+    tags={["Full-Stack", "AI", "E-Commerce", "Retail Tech"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Local Agent Forge"
+    desc="A fully local, multi-agent AI coding pipeline. A conversation with a Master AI is compiled and handed to a Prompt Maker, which devises a task for a Worker AI to complete. The generated code is then reviewed by a Critique AI for bugs and adherence to the brief, and any issues are routed back to the Prompt Maker to generate a corrective task — creating an iterative, self-correcting loop with no cloud API calls."
+    url="#"
+    techStack="Python, CustomTkinter, Ollama, phi4-mini, deepseek-r1:1.5b"
+    tags={["AI", "Multi-Agent Systems", "Local LLM", "Desktop Utility"]}
+  />
+
+  <div class="pb-8 mt-10">
+    <div class="text-3xl w-full font-bold mb-2">Experience</div>
+
+    <div class="py-4">
+      <div class="text-xl font-bold">Phone Shop Staff & Repair Tech</div>
+      <div class="text-sm font-light opacity-70">Local Shop · 2 Years</div>
+      <text class="text-lg">
+        Handled hands-on hardware troubleshooting, phone rewiring, and component diagnostics. Also managed sales talks and customer service — learning to explain technical issues in plain language and solve problems from start to finish.
+      </text>
+    </div>
+
+    <div class="py-4">
+      <div class="text-xl font-bold">Office Admin Assistant</div>
+      <text class="text-lg">
+        Handled documentation, file organization, and office workflow management — strengthening attention to detail, organization, and clear communication across the team.
+      </text>
+    </div>
+  </div>
+</BaseLayout>

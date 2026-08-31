@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+const { title, img, desc, url, badge, tags, techStack, target = "_blank" } = Astro.props;
+---
+<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+  <a href={url} target={target}>
+    <div class="hero-content flex-col md:flex-row">
+      {
+        img && (
+          <Image
+            width={750}
+            height={422}
+            format="webp"
+            src={img}
+            alt={title}
+            class="max-w-full md:max-w-[13rem] rounded-lg"
+          />
+        )
+      }
+      <div class="grow w-full p-5 md:p-0">
+        <h1 class="text-xl font-bold">
+          {title}
+          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+        </h1>
+        <p class="py-1 text-1xl">{desc}</p>
+        {techStack && (
+          <p class="py-1 text-sm text-base-content/70">
+            <span class="font-semibold">Tech Stack:</span> {techStack}
+          </p>
+        )}
+        {tags && tags.length > 0 && (
+          <div class="mt-2 flex flex-wrap gap-1">
+            {tags.map((tag) => (
+              <a href={`/blog/tag/${tag}`} class="badge badge-outline">{tag}</a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </a>
+</div>

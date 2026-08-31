@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    I am passionate about creating software and hardware that helps solve modern-day problems, with AI as my primary tool. What drives me is the ability to take an idea from concept to working prototype by leveraging artificial intelligence to amplify my capabilities as a builder. I do not just use AI — I use it proficiently. From emotionally responsive robots to intelligent tutoring systems, every project I build is a reflection of how I harness AI to turn imagination into functional reality.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Elementary School Graduate"
+      subtitle="Elementary School"
+      image="/elementary.jpg"
+      imageAlt="Elementary school graduation photo"
+      logo="/elementary-logo.jpeg"
+      logoAlt="Elementary school logo"
+    >
+      Graduated from elementary school with honors — the first step in my educational journey.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Junior High School Graduate"
+      subtitle="Maddela Comprehensive High School — Junior High"
+      image="/junior-high.jpeg"
+      imageAlt="Junior high school graduation photo"
+      logo="/junior-senior-logo.jpeg"
+      logoAlt="Junior/Senior high school logo"
+    >
+      Completed junior high school at Maddela Comprehensive High School, Quirino, graduating with high honors.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Senior High School Graduate"
+      subtitle="Maddela Comprehensive High School — Senior High · STEM Strand"
+      image="/senior-high.jpg"
+      imageAlt="Senior high school graduation photo"
+      logo="/junior-senior-logo.jpeg"
+      logoAlt="Junior/Senior high school logo"
+    >
+      Completed senior high school at Maddela Comprehensive High School, Quirino, under the STEM strand, graduating with high honors. Received a Silver Medal in Science and a Bronze Medal in Research.
+    </TimeLineElement>
+    <TimeLineElement
+      title="BS Computer Science Student"
+      subtitle="University of the Cordilleras"
+      logo="/university-logo.jpg"
+      logoAlt="University of the Cordilleras logo"
+    >
+      Currently enrolled, pursuing a Bachelor of Science in Computer Science.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Phone Shop Staff & Repair Tech"
+      subtitle="Local Phone Shop"
+    >
+      Handled hardware troubleshooting, phone rewiring, component diagnostics, sales talks, and customer management for over 2 years. This role sharpened my problem-solving skills, technical capability, and ability to communicate clearly with customers.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Office Admin Assistant"
+      subtitle="Office Administration"
+    >
+      Handled documentation, file organization, and office workflow management. Built strong organizational habits and professional communication skills.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li class="break-inside-avoid">Python</li>
+    <li class="break-inside-avoid">C/C++</li>
+    <li class="break-inside-avoid">JavaScript / TypeScript</li>
+    <li class="break-inside-avoid">Rust</li>
+    <li class="break-inside-avoid">React</li>
+    <li class="break-inside-avoid">FastAPI</li>
+    <li class="break-inside-avoid">Tauri</li>
+    <li class="break-inside-avoid">SQLite</li>
+    <li class="break-inside-avoid">Vite</li>
+    <li class="break-inside-avoid">PyQt5</li>
+    <li class="break-inside-avoid">Google Gemini API</li>
+    <li class="break-inside-avoid">Groq API</li>
+    <li class="break-inside-avoid">DeepSeek API</li>
+    <li class="break-inside-avoid">LLM-assisted development</li>
+    <li class="break-inside-avoid">Prompt refinement</li>
+    <li class="break-inside-avoid">AI-augmented prototyping</li>
+    <li class="break-inside-avoid">Raspberry Pi</li>
+    <li class="break-inside-avoid">Embedded systems</li>
+    <li class="break-inside-avoid">Sensor integration</li>
+    <li class="break-inside-avoid">Circuit assembly</li>
+    <li class="break-inside-avoid">AI-augmented full-stack development</li>
+    <li class="break-inside-avoid">AI-augmented hardware-software integration</li>
+    <li class="break-inside-avoid">Documentation handling (SPES admin experience)</li>
+  </ul>
+</BaseLayout>
