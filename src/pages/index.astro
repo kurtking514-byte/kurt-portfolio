@@ -5,7 +5,6 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Kurt King D. Magastino</div>
     <div class="text-3xl py-3 font-bold">Operating in the space between hardware and software, using AI as a tool to build solutions that matter.</div>
     <div class="py-2">
@@ -44,7 +43,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     title="ROBERT0"
     img="/robert0.jpg"
     desc="An emotionally responsive robot that listens to users as they describe how they feel. It identifies the stated emotion, performs small head movements that reflect that emotion, and plays corresponding music to comfort the user — a bridge between hardware mechanics and empathetic software."
-    url="#"
+    url="/projects#robert0"
+    target="_self"
     techStack="Hardware sensors, emotion recognition AI, motor control"
     tags={["Hardware", "Emotion Recognition", "AI", "Robotics"]}
   />
@@ -54,7 +54,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     
     img="/tutor-gojo.png"
     desc="An AI tutor designed to teach programming step by step. It tracks the learner's progress through the curriculum and adapts to their pace. An upcoming feature will introduce quizzes to test and reinforce what the user has learned, making it a complete guided learning companion."
-    url="#"
+    url="/projects#tutor-gojo"
+    target="_self"
     techStack="React 19, Vite, FastAPI, SQLite, Google Gemini API"
     tags={["EdTech", "AI Tutor", "Programming", "Progress Tracking"]}
   />
@@ -63,7 +64,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     title="Prompt Refiner"
     img="/prompt-refiner.png"
     desc="Lightweight Windows utility (Tauri/Rust + React) that refines prompts using the Groq API via a global hotkey (Alt+Space)."
-    url="#"
+    url="/projects#prompt-refiner"
+    target="_self"
     techStack="Tauri, Rust, React, Groq API"
     tags={["Productivity", "AI", "Desktop Utility", "Prompt Engineering"]}
   />
@@ -72,7 +74,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     title="POSEIDON"
     img="/poseidon.jpg"
     desc="Portable pico-hydropowered flashlight that converts water flow into electricity for off-grid lighting."
-    url="#"
+    url="/projects#poseidon"
+    target="_self"
     techStack="Dual Pico-Hydro Turbines, DC-DC Buck Converter, Li-ion Battery"
     tags={["Dual Pico-Hydro Turbines", "DC-DC Buck Converter", "Li-ion Battery"]}
   />
@@ -81,17 +84,18 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     title="B.A.L.O.N.G"
     img="/balong.jpg"
     desc="Autonomous medical delivery robot using Raspberry Pi 3B+ and Cytron URC10 to reduce understaffed hospital workloads."
-    url="#"
+    url="/projects#balong"
+    target="_self"
     techStack="Raspberry Pi 3B+, Cytron URC10, Python, PyQt5, C/C++, SQLite"
     tags={["Hardware", "Robotics", "Autonomous Navigation", "Healthcare Tech"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Norman Cellphone Center and Accessories"
-    img="/norman.png"
-    img2="/norman1.png"
+    img="/norman0.png"
     desc="Admin dashboard and AI-assisted Messenger storefront for a phone retail and repair shop. Customers browse products, reserve items, and request repairs through a Facebook Messenger bot powered by AI (DeepSeek + Gemini). Shop staff manage inventory, reservations, repairs, and customer conversations through a React admin dashboard with JWT-based authentication."
-    url="#"
+    url="/projects#norman"
+    target="_self"
     badge="In Development"
     techStack="FastAPI, React 18, Vite 5, SQLite, DeepSeek API, Gemini API, JWT Auth"
     tags={["Full-Stack", "AI", "E-Commerce", "Retail Tech"]}
@@ -100,7 +104,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <HorizontalCard
     title="Local Agent Forge"
     desc="A fully local, multi-agent AI coding pipeline. A conversation with a Master AI is compiled and handed to a Prompt Maker, which devises a task for a Worker AI to complete. The generated code is then reviewed by a Critique AI for bugs and adherence to the brief, and any issues are routed back to the Prompt Maker to generate a corrective task — creating an iterative, self-correcting loop with no cloud API calls."
-    url="#"
+    url="/projects#local-agent-forge"
+    target="_self"
     techStack="Python, CustomTkinter, Ollama, phi4-mini, deepseek-r1:1.5b"
     tags={["AI", "Multi-Agent Systems", "Local LLM", "Desktop Utility"]}
   />

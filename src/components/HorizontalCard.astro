@@ -1,6 +1,20 @@
 ---
 import { Image } from "astro:assets";
-const { title, img, img2, desc, url, badge, tags, techStack, target = "_blank" } = Astro.props;
+const {
+  title,
+  img,
+  img2,
+  desc,
+  url,
+  badge,
+  tags,
+  techStack,
+  target = "_blank",
+  extraDetails,
+  extraImages,
+} = Astro.props;
+
+const hasExtras = Boolean(extraDetails) || Boolean(extraImages && extraImages.length > 0);
 ---
 <div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
   <a href={url} target={target}>
@@ -50,4 +64,29 @@ const { title, img, img2, desc, url, badge, tags, techStack, target = "_blank" }
       </div>
     </div>
   </a>
+
+  {hasExtras && (
+    <details class="collapse collapse-arrow bg-base-200 rounded-lg mx-5 md:mx-0 mb-5 md:mb-0">
+      <summary class="collapse-title text-sm font-semibold">
+        More details
+      </summary>
+      <div class="collapse-content">
+        {extraDetails && <p class="text-sm py-1 whitespace-pre-line">{extraDetails}</p>}
+        {extraImages && extraImages.length > 0 && (
+          <div class="flex flex-wrap gap-3 mt-2">
+            {extraImages.map((image) => (
+              <Image
+                width={400}
+                height={225}
+                format="webp"
+                src={image}
+                alt={`${title} - additional photo`}
+                class="max-w-full md:max-w-[12rem] rounded-lg"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </details>
+  )}
 </div>
