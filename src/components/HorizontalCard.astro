@@ -85,14 +85,14 @@ const hasExtras =
                 format="webp"
                 src={image}
                 alt={`${title} - additional photo`}
-                class="w-32 h-24 sm:w-40 sm:h-28 object-contain bg-base-100 rounded-lg"
+                class="w-48 h-36 sm:w-56 sm:h-40 object-contain bg-base-100 rounded-lg"
               />
             ))}
           </div>
         )}
         {extraVideo && (
           <div class="mt-3">
-            <video controls preload="metadata" class="w-full max-w-md rounded-lg">
+            <video controls preload="metadata" class="w-full max-w-xs rounded-lg">
               <source src={extraVideo} />
               Your browser does not support the video tag.
             </video>

@@ -93,6 +93,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="Raspberry Pi 3B+, Cytron URC10, Python, PyQt5, C/C++, SQLite"
       tags={["Hardware", "Robotics", "Autonomous Navigation", "Healthcare Tech"]}
       extraDetails={`Built as a 4-person school research project; my role was the hardware — designing and assembling the physical delivery robot, while a collaborator developed the navigation and task-handling software. The system uses a distributed processing architecture: a Raspberry Pi 3B+ handles high-level navigation planning and the touchscreen interface, while a Cytron URC10 motor controller handles real-time movement and obstacle avoidance, communicating over UART serial at 9600 baud. UART was chosen over I2C, SPI, or USB specifically for its simplicity and reliability over the short onboard wiring distance. The two processors also run on separate, isolated power circuits — the Pi on 5V via USB, the motors on 12V directly from the battery — to prevent motor electrical noise from interfering with the Pi. Testing in a simulated hospital corridor achieved a 94% delivery success rate, 99.2% communication reliability between the two processors, and sub-50ms command latency, at a total build cost of approximately ₱13,500.`}
+      extraVideo="/portfolio/balong/balong.mp4"
     />
   </div>
   <div class="divider my-0"></div>
