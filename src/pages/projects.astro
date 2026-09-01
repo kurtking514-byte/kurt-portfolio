@@ -18,6 +18,13 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="Hardware sensors, emotion recognition AI, motor control"
       tags={["Hardware", "Emotion Recognition", "AI", "Robotics"]}
       extraDetails={`Built on a Raspberry Pi 3B+ with an MG90S servo on a pan-tilt bracket for expressive left-right movement, an OLED display, microphone, and speaker, all housed in a Sintra board frame — total cost under ₱5,000. Rather than facial recognition or machine learning, ROBERT0 uses keyword-based text analysis: speech is converted to text via Google's Speech-to-Text API, then matched against keywords for four emotion categories (happy, sad, angry, chill). Once an emotion is detected, it randomly selects a track from that emotion's music folder and plays it while performing a synchronized servo movement. The code was written in Python with AI assistance for generation and optimization. Tested across 40 trials (10 per emotion), it achieved 90% emotion-detection accuracy and 92% servo-movement reliability — "chill" was detected perfectly every time, while "sad" was the hardest to classify correctly (80%). A known limitation: it requires an active internet connection since emotion detection runs through a cloud API rather than locally.`}
+      extraImages={[
+        "/portfolio/robert0/IMG20251102121021.jpg",
+        "/portfolio/robert0/IMG20251112165747.jpg",
+        "/portfolio/robert0/IMG20251114081706.jpg",
+        "/portfolio/robert0/roberto%20presentation.jpeg",
+      ]}
+      extraVideo="/portfolio/robert0/roberto.mp4"
     />
   </div>
   <div class="divider my-0"></div>
@@ -31,6 +38,10 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="React 19, Vite, FastAPI, SQLite, Google Gemini API"
       tags={["EdTech", "AI Tutor", "Programming", "Progress Tracking"]}
       extraDetails={`Built with a React + Vite frontend and FastAPI backend, powered by the Google Gemini API. Chat responses stream in real-time via Server-Sent Events, and conversations persist across sessions using SQLite. A notable design choice: long-term learning progress is stored as human-readable Markdown files rather than a database, so Tutor Gojo can track what a learner has covered and recommend next topics without requiring user accounts — sessions are anonymous and browser-based. Currently finished and functional; planned next features include user authentication, file uploads, and support for additional AI providers beyond Gemini.`}
+      extraImages={[
+        "/portfolio/tutor-gojo/tutor%20gojo%20.png",
+        "/portfolio/tutor-gojo/tutor%20gojo%202.png",
+      ]}
     />
   </div>
   <div class="divider my-0"></div>
@@ -44,6 +55,12 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="Tauri, Rust, React, Groq API"
       tags={["Productivity", "AI", "Desktop Utility", "Prompt Engineering"]}
       extraDetails={`Built with Tauri 2 (Rust) for the native desktop shell and React 19 + TypeScript + Vite for the interface, using Groq's llama-3.3-70b-versatile model. The core design decision was making the clarifying questions dynamic rather than templated — after a rough prompt idea is submitted, the AI generates 3 context-aware follow-up questions specific to that input, rather than a fixed generic checklist, then merges the answers into a structured, role-based system prompt. Finished and functional, runs quietly in the system tray between uses.`}
+      extraImages={[
+        "/portfolio/prompt-refiner/Screenshot%202026-07-10%20192506.png",
+        "/portfolio/prompt-refiner/Screenshot%202026-07-11%20152249.png",
+        "/portfolio/prompt-refiner/Screenshot%202026-07-11%20152322.png",
+        "/portfolio/prompt-refiner/Screenshot%202026-07-11%20152346.png",
+      ]}
     />
   </div>
   <div class="divider my-0"></div>
@@ -57,6 +74,12 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="Dual Pico-Hydro Turbines, DC-DC Buck Converter, Li-ion Battery"
       tags={["Dual Pico-Hydro Turbines", "DC-DC Buck Converter", "Li-ion Battery"]}
       extraDetails={`Built as part of a 6-person school research requirement (Inquiries, Investigations, and Immersion), but the physical system — the dual-turbine assembly, the funnel/PVC water-guide structure, the sealed Sintra-board electronics compartment, and the wiring to the LM2596 buck converter and flashlight — was built by me. The design uses two 12V-rated pico-hydro turbines in series: testing revealed a single turbine only produced 3.3V after regulation, insufficient to charge the battery, so both turbines were run together to reach a combined 15–18V input, which the buck converter steps down to a stable, regulated 5V output. Across 20 trials at flow velocities of 1.5–3.0 m/s, it produced a mean electrical power of 507.8 mW at roughly 27% overall system efficiency — comparable to or better than typical consumer solar panels (15–22%). One of the clearer findings: low-light mode used the harvested energy far more efficiently than high-brightness mode (about 6 minutes of light per charge vs. 1.5 minutes), which became the practical recommendation for real off-grid or disaster use.`}
+      extraImages={[
+        "/portfolio/poseidon/poseidon%201st%20place.jpg",
+        "/portfolio/poseidon/poseidon%20high%20side.jpg",
+        "/portfolio/poseidon/poseidon%20low%20middle.jpg",
+        "/portfolio/poseidon/poseidon%20low%20side.jpg",
+      ]}
     />
   </div>
   <div class="divider my-0"></div>
@@ -84,6 +107,10 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       techStack="FastAPI, React 18, Vite 5, SQLite, DeepSeek API, Gemini API, JWT Auth"
       tags={["Full-Stack", "AI", "E-Commerce", "Retail Tech"]}
       extraDetails={`Status: Actively in development. The backend is built with FastAPI (Python 3.10+) and the admin dashboard with React 18 + Vite 5. Shop staff manage inventory, reservations, repairs, and customer conversations through the dashboard, secured with JWT authentication. The Messenger bot side uses DeepSeek for AI chat responses and Gemini for image-based product lookups, integrated through Meta's webhook API. Currently deployed on Render's free tier, which means the service cold-starts after ~15 minutes of inactivity, and the database resets on every redeploy since there's no persistent disk attached yet — that's an open item still being worked on.`}
+      extraImages={[
+        "/portfolio/norman/norman.png",
+        "/portfolio/norman/norman1.png",
+      ]}
     />
   </div>
   <div class="divider my-0"></div>
